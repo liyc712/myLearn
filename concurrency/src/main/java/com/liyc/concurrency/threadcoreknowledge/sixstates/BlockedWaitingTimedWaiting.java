@@ -1,7 +1,7 @@
-package threadcoreknowledge.sixstates;
+package com.liyc.concurrency.threadcoreknowledge.sixstates;
 
 /**
- * 描述：     展示Blocked, Waiting, TimedWaiting
+ * 描述：展示Blocked, Waiting, TimedWaiting
  */
 public class BlockedWaitingTimedWaiting implements Runnable{
     public static void main(String[] args) {
@@ -42,4 +42,10 @@ public class BlockedWaitingTimedWaiting implements Runnable{
             e.printStackTrace();
         }
     }
+    /**
+     * 输出：
+     * TIMED_WAITING
+     * BLOCKED
+     * WAITING
+     */
 }
