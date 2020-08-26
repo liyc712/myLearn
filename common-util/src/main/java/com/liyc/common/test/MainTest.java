@@ -25,5 +25,6 @@ public class MainTest {
         list.add("a");
         list.add("b");
         System.out.println(list.get(0));
+        int a = 0;
     }
 }
