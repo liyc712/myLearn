@@ -1,8 +1,8 @@
-package threadcoreknowledge.threadobjectclasscommonmethods;
+package com.liyc.concurrency.threadcoreknowledge.threadobjectclasscommonmethods;
 
 
 /**
- * 描述：     两个线程交替打印0~100的奇偶数，用wait和notify
+ * 描述：两个线程交替打印0~100的奇偶数，用wait和notify
  */
 public class WaitNotifyPrintOddEveWait {
 
@@ -10,8 +10,9 @@ public class WaitNotifyPrintOddEveWait {
     private static final Object lock = new Object();
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         new Thread(new TurningRunner(), "偶数").start();
+        Thread.sleep(10);
         new Thread(new TurningRunner(), "奇数").start();
     }
 

@@ -1,7 +1,7 @@
-package threadcoreknowledge.threadobjectclasscommonmethods;
+package com.liyc.concurrency.threadcoreknowledge.threadobjectclasscommonmethods;
 
 /**
- * 描述：     证明wait只释放当前的那把锁
+ * 描述：证明wait只释放当前的那把锁
  */
 public class WaitNotifyReleaseOwnMonitor {
 
@@ -50,4 +50,17 @@ public class WaitNotifyReleaseOwnMonitor {
         thread1.start();
         thread2.start();
     }
+    /**
+     * 证明wait只释放当前的那把锁
+     *
+     * 输出：
+     *
+     * ThreadA got resourceA lock.
+     * ThreadA got resourceB lock.
+     * ThreadA releases resourceA lock.
+     * ThreadB got resourceA lock.
+     * ThreadB tries to resourceB lock.
+     * ...
+     *
+     */
 }

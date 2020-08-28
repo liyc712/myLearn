@@ -1,12 +1,10 @@
-package threadcoreknowledge.threadobjectclasscommonmethods;
+package com.liyc.concurrency.threadcoreknowledge.threadobjectclasscommonmethods;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
- * 描述：     用wait/notify来实现生产者消费者模式
+ * 描述： 用wait/notify来实现生产者消费者模式
  */
 public class ProducerConsumerModel {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package threadcoreknowledge.threadobjectclasscommonmethods;
+package com.liyc.concurrency.threadcoreknowledge.threadobjectclasscommonmethods;
 
 /**
- * 描述：     演示打印main, Thread-0, Thread-1
+ * 描述：演示打印main, Thread-0, Thread-1
  */
 public class CurrentThread implements Runnable {
 
@@ -15,4 +15,12 @@ public class CurrentThread implements Runnable {
     public void run() {
         System.out.println(Thread.currentThread().getName());
     }
+
+    /**
+     * 输出：
+     * main
+     * Thread-0
+     * Thread-1
+     *
+     */
 }

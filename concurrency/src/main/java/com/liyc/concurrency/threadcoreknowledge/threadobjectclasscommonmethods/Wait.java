@@ -1,7 +1,7 @@
-package threadcoreknowledge.threadobjectclasscommonmethods;
+package com.liyc.concurrency.threadcoreknowledge.threadobjectclasscommonmethods;
 
 /**
- * 描述：     展示wait和notify的基本用法 1. 研究代码执行顺序 2. 证明wait释放锁
+ * 描述：展示wait和notify的基本用法 1. 研究代码执行顺序 2. 证明wait释放锁
  */
 public class Wait {
 
@@ -41,4 +41,13 @@ public class Wait {
         Thread.sleep(200);
         thread2.start();
     }
+
+    /**
+     * 展示wait和notify的基本用法 1. 研究代码执行顺序 2. 证明wait释放锁
+     *
+     * 输出：
+     * Thread-0开始执行了
+     * 线程Thread-1调用了notify()
+     * 线程Thread-0获取到了锁。
+     */
 }
