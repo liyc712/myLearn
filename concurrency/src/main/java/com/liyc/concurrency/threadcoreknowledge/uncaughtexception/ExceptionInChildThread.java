@@ -1,19 +1,29 @@
-package threadcoreknowledge.uncaughtexception;
+package com.liyc.concurrency.threadcoreknowledge.uncaughtexception;
 
 /**
- * 描述：     单线程，抛出，处理，有异常堆栈 多线程，子线程发生异常，会有什么不同？
+ * 描述：当子线程抛出异常，主线程无法感知和捕获子线程的异常
  */
 public class ExceptionInChildThread implements Runnable {
 
-    public static void main(String[] args) {
-        new Thread(new ExceptionInChildThread()).start();
-        for (int i = 0; i < 1000; i++) {
-            System.out.println(i);
-        }
+    public static void main(String[] args) throws InterruptedException {
+        Thread thread = new Thread(new ExceptionInChildThread());
+        thread.start();
+        thread.join();
+        System.out.println("主线程执行完毕...");
     }
 
     @Override
     public void run() {
         throw new RuntimeException();
     }
+    /**
+     * 当子线程抛出异常，主线程无法感知和捕获子线程的异常
+     *
+     * 运行结果:
+     * Exception in thread "Thread-0" java.lang.RuntimeException
+     * 	at com.liyc.concurrency.threadcoreknowledge.uncaughtexception.ExceptionInChildThread.run(ExceptionInChildThread.java:17)
+     * 	at java.lang.Thread.run(Thread.java:748)
+     * 主线程执行完毕...
+     *
+     */
 }
