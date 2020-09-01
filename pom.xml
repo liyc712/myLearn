@@ -11,6 +11,7 @@
     <modules>
         <module>concurrency</module>
         <module>common-util</module>
+        <module>springboot</module>
     </modules>
 
 
