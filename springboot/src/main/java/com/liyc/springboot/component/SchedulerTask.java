@@ -27,11 +27,11 @@ public class SchedulerTask {
 
     @Scheduled(cron="*/6 * * * * ?")
     private void process(){
-        log.info("第一个定时任务 {}",dateFormat.format(new Date()));
+        //log.info("第一个定时任务 {}",dateFormat.format(new Date()));
     }
 
     @Scheduled(fixedRate = 6000)
     public void reportCurrentTime() {
-        log.info("第二个定时任务：{}" ,dateFormat.format(new Date()));
+        //log.info("第二个定时任务：{}" ,dateFormat.format(new Date()));
     }
 }
