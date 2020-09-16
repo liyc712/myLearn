@@ -1,7 +1,7 @@
 package com.liyc.common.utill.test;
 
 import com.liyc.common.util.easyexcel.ExcelUtil;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.util.List;
 
