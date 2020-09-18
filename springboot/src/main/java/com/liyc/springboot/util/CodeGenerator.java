@@ -27,7 +27,7 @@ public class CodeGenerator {
 
     public static void main(String[] args) {
         String tableName = "user";
-        String modelName = "user";
+        String modelName = "";
         generator(tableName,modelName);
     }
 
