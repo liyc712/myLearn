@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liyc.springboot.dao.HerosMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.liyc.springboot.model.Heros">
+                <id column="id" property="id" />
+                <result column="name" property="name" />
+                <result column="hp_max" property="hpMax" />
+                <result column="hp_growth" property="hpGrowth" />
+                <result column="hp_start" property="hpStart" />
+                <result column="mp_max" property="mpMax" />
+                <result column="mp_growth" property="mpGrowth" />
+                <result column="mp_start" property="mpStart" />
+                <result column="attack_max" property="attackMax" />
+                <result column="attack_growth" property="attackGrowth" />
+                <result column="attack_start" property="attackStart" />
+                <result column="defense_max" property="defenseMax" />
+                <result column="defense_growth" property="defenseGrowth" />
+                <result column="defense_start" property="defenseStart" />
+                <result column="hp_5s_max" property="hp5sMax" />
+                <result column="hp_5s_growth" property="hp5sGrowth" />
+                <result column="hp_5s_start" property="hp5sStart" />
+                <result column="mp_5s_max" property="mp5sMax" />
+                <result column="mp_5s_growth" property="mp5sGrowth" />
+                <result column="mp_5s_start" property="mp5sStart" />
+                <result column="attack_speed_max" property="attackSpeedMax" />
+                <result column="attack_range" property="attackRange" />
+                <result column="role_main" property="roleMain" />
+                <result column="role_assist" property="roleAssist" />
+                <result column="birthdate" property="birthdate" />
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+        id, name, hp_max, hp_growth, hp_start, mp_max, mp_growth, mp_start, attack_max, attack_growth, attack_start, defense_max, defense_growth, defense_start, hp_5s_max, hp_5s_growth, hp_5s_start, mp_5s_max, mp_5s_growth, mp_5s_start, attack_speed_max, attack_range, role_main, role_assist, birthdate
+        </sql>
+
+</mapper>
