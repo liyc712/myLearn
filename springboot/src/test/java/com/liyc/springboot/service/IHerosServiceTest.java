@@ -33,5 +33,11 @@ public class IHerosServiceTest {
         log.info("getById:【{}】",heros);
     }
 
+    @Test
+    public void test() {
+        Integer i = 1;
+        System.out.println("1".equals(i.toString()));
+    }
+
 
 }

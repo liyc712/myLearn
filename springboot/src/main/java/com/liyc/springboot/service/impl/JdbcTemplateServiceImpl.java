@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author lyc
@@ -55,5 +56,10 @@ public class JdbcTemplateServiceImpl implements JdbcTemplateService {
     @Override
     public int[] batchinsert(List<User> users) {
         return jdbcTemplateDao.batchinsert(users);
+    }
+
+    @Override
+    public List<Map<String, Object>> queryList() {
+        return jdbcTemplateDao.queryList();
     }
 }

@@ -170,5 +170,8 @@ public class JdbcTemplateDao {
         return updateCounts;
     }
 
-
+    public List<Map<String, Object>> queryList() {
+        String sql = "select * from heros ";
+        return jdbcTemplate.queryForList(sql);
+    }
 }

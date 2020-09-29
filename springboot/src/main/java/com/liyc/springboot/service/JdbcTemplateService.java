@@ -3,6 +3,7 @@ package com.liyc.springboot.service;
 import com.liyc.springboot.model.User;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author lyc
@@ -23,4 +24,6 @@ public interface JdbcTemplateService {
     int[] batchUpdate(List<User> users);
 
     int[] batchinsert(List<User> users);
+
+    List<Map<String, Object>> queryList();
 }
