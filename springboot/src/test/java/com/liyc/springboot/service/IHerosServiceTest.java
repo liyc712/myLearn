@@ -1,6 +1,8 @@
 package com.liyc.springboot.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.liyc.springboot.model.Heros;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,9 +36,14 @@ public class IHerosServiceTest {
     }
 
     @Test
-    public void test() {
-        Integer i = 1;
-        System.out.println("1".equals(i.toString()));
+    public void testWrapper() {
+        Heros heros = new Heros();
+        heros.setName("张飞");
+        QueryWrapper wrapper = new QueryWrapper(heros);
+        // 此处需写sql中的列名,不能写javaBean属性名
+        wrapper.select("id","name", "hp_5s_max");
+        Page page = iHerosService.page(new Page(1,10), wrapper);
+        System.out.println(page.getTotal());
     }
 
 
