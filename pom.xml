@@ -12,6 +12,7 @@
         <module>concurrency</module>
         <module>common-util</module>
         <module>springboot</module>
+        <module>liyc-java8</module>
     </modules>
 
 
@@ -106,6 +107,7 @@
                 <artifactId>httpcomponents-client</artifactId>
                 <version>4.3.5</version>
             </dependency>
+
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpcomponents-core</artifactId>
