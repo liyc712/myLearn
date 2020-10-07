@@ -1,4 +1,4 @@
-package com.liyc.shiro.test;
+package com.liyc.shiro;
 
 import org.apache.shiro.crypto.hash.Md5Hash;
 

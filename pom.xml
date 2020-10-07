@@ -13,6 +13,7 @@
         <module>common-util</module>
         <module>springboot</module>
         <module>liyc-java8</module>
+        <module>shiro</module>
     </modules>
 
 

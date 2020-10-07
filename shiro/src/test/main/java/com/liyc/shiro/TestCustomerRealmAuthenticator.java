@@ -1,6 +1,6 @@
-package com.liyc.shiro.test;
+package com.liyc.shiro;
 
-import com.liyc.shiro.test.ream.CustomerRealm;
+import com.liyc.shiro.ream.CustomerRealm;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
