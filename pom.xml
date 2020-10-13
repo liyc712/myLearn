@@ -14,6 +14,7 @@
         <module>springboot</module>
         <module>liyc-java8</module>
         <module>shiro</module>
+        <module>common-test</module>
     </modules>
 
 
