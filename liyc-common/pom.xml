@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>common-util</artifactId>
+    <artifactId>liyc-common</artifactId>
 
     <dependencies>
         <!-- Spring框架基本的核心工具 -->
