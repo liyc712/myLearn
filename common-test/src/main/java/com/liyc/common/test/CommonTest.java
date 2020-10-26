@@ -9,6 +9,7 @@ import java.lang.reflect.Method;
 public class CommonTest {
 
     public static void main(String[] args) {
+        // 反射永福
         AobingService aobingService = new AobingServiceImpl();
         Class<AobingService> serviceClass = AobingService.class;
         try {
