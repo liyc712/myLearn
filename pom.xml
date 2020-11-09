@@ -15,6 +15,7 @@
         <module>liyc-java8</module>
         <module>shiro</module>
         <module>common-test</module>
+        <module>liyc-guava</module>
     </modules>
 
 
@@ -100,7 +101,6 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
-                <scope>test</scope>
             </dependency>
 
             <!--httClient-->
