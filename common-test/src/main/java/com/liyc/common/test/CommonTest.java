@@ -2,9 +2,11 @@ package com.liyc.common.test;
 
 import com.liyc.common.test.rpc.service.AobingService;
 import com.liyc.common.test.rpc.service.impl.AobingServiceImpl;
+import org.junit.Test;
 import sun.security.provider.MD5;
 
 import java.lang.reflect.Method;
+import java.util.Objects;
 
 public class CommonTest {
 
@@ -20,5 +22,11 @@ public class CommonTest {
             e.printStackTrace();
         }
 
+    }
+
+    @Test
+    public void test() {
+        Integer i = null;
+        System.out.println(Objects.equals(1,i));
     }
 }

@@ -72,7 +72,7 @@ public class ListsExampleTest
     @Test
     public void testPartition(){
         ArrayList<String> list = Lists.newArrayList("1", "2", "3","4");
-        List<List<String>> result = Lists.partition(list, 30);
-        System.out.println(result.get(0));
+        List<List<String>> result = Lists.partition(list, 2);
+        System.out.println(result);
     }
 }

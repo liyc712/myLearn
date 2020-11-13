@@ -49,6 +49,7 @@ public class JoinerTest {
     @Test(expected = NullPointerException.class)
     public void testJoinOnJoinWithNullValue() {
         String result = Joiner.on("#").join(stringListWithNullValue);
+        System.out.println(result);
         assertThat(result, equalTo("Google#Guava#Java#Scala#Kafka"));
     }
 
