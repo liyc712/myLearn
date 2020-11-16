@@ -62,4 +62,30 @@ public class JdbcTemplateServiceImpl implements JdbcTemplateService {
     public List<Map<String, Object>> queryList() {
         return jdbcTemplateDao.queryList();
     }
+
+    @Override
+    public int updateUserNameById(Long id, String userName) {
+        return jdbcTemplateDao.updateUserNameById(id,userName);
+    }
+
+
+    private int updateUser1(User user) {
+        return updateUserNameById(user.getId(), user.getUserName());
+    }
+    /**
+     * 事务回滚测试
+     * @param user
+     * @return
+     */
+    @Override
+    public int updateUser(User user) {
+        int i = updateUser1(user);
+        log.info("执行结果:【{}】",i);
+        if (i > 0) {
+            log.info("抛出运行是异常");
+            throw new RuntimeException();
+        }
+
+        return i;
+    }
 }

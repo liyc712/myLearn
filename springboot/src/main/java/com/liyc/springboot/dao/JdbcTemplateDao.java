@@ -174,4 +174,9 @@ public class JdbcTemplateDao {
         String sql = "select * from heros ";
         return jdbcTemplate.queryForList(sql);
     }
+
+    public int updateUserNameById(Long id,String userName) {
+        String sql = " update user u set u.user_name=? where u.id=?";
+        return jdbcTemplate.update(sql, userName, id);
+    }
 }

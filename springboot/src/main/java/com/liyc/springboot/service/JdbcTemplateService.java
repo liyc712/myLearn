@@ -26,4 +26,8 @@ public interface JdbcTemplateService {
     int[] batchinsert(List<User> users);
 
     List<Map<String, Object>> queryList();
+
+    int updateUserNameById(Long id, String userName);
+
+    int updateUser(User user);
 }

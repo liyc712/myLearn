@@ -121,4 +121,12 @@ public class JdbcTemplateServiceTest {
         List<Map<String, Object>> maps = jdbcTemplateService.queryList();
         System.out.println("------------------------------");
     }
+
+    @Test
+    public void updateUser() {
+        User user = new User();
+        user.setId(1L);
+        user.setUserName("user_name_1_new");
+        jdbcTemplateService.updateUser(user);
+    }
 }
