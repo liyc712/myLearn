@@ -4,8 +4,8 @@ spring:
     active: test
   activemq:
     #    broker地址 两个单机配置：failover:(tcp://localhost:61616,tcp://localhost:61617)?randomize=true
-    broker-url: tcp://127.0.0.1:61616
-
+#    broker-url: tcp://127.0.0.1:61616
+    broker-url: tcp://116.196.83.187:16162
     pool:
       max-connections: 100
       enabled: false
