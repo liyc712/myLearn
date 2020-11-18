@@ -1,0 +1,29 @@
+### datasource Configuration
+spring:
+  profiles:
+    active: test
+  activemq:
+    #    broker地址 两个单机配置：failover:(tcp://localhost:61616,tcp://localhost:61617)?randomize=true
+    broker-url: tcp://127.0.0.1:61616
+
+    pool:
+      max-connections: 100
+      enabled: false
+  jms:
+    #采用队列模式为false，主题模式为true
+    pub-sub-domain: true
+    cache:
+      session-cache-size: 100
+    template:
+      receive-timeout: 100
+      #      是否持久化
+      delivery-mode: persistent
+
+
+logging:
+  file: /logs/myLearn/liyc-activemq/liyc-activemq.log
+  pattern:
+    #yml文件中首尾加上单引号可解决识别不了%的问题，properties不需要加
+#    %-d{yyyy-MM-dd HH:mm:ss} [%c-%L]-[%p] %m %n
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%thread] [%c-%L]-[%p] - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] [%c-%L]-[%p] - %msg%n'

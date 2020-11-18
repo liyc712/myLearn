@@ -33,7 +33,7 @@ CREATE TABLE `t_perms` (
 -- ----------------------------
 BEGIN;
 INSERT INTO `t_perms` VALUES (1, 'user:*:*', '');
-INSERT INTO `t_perms` VALUES (2, 'product:*:01', NULL);
+INSERT INTO `t_perms` VALUES (2, 'com.liyc.activemq.product:*:01', NULL);
 INSERT INTO `t_perms` VALUES (3, 'order:*:*', NULL);
 COMMIT;
 
@@ -53,7 +53,7 @@ CREATE TABLE `t_role` (
 BEGIN;
 INSERT INTO `t_role` VALUES (1, 'admin');
 INSERT INTO `t_role` VALUES (2, 'user');
-INSERT INTO `t_role` VALUES (3, 'product');
+INSERT INTO `t_role` VALUES (3, 'com.liyc.activemq.product');
 COMMIT;
 
 -- ----------------------------

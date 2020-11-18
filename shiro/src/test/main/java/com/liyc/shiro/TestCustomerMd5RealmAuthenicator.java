@@ -69,7 +69,7 @@ public class TestCustomerMd5RealmAuthenicator {
 
             //基于权限字符串的访问控制  资源标识符:操作:资源类型
             System.out.println("权限:"+subject.isPermitted("user:update:01"));
-            System.out.println("权限:"+subject.isPermitted("product:create:02"));
+            System.out.println("权限:"+subject.isPermitted("com.liyc.activemq.product:create:02"));
 
             //分别具有那些权限
             boolean[] permitted = subject.isPermitted("user:*:01", "order:*:10");
@@ -78,7 +78,7 @@ public class TestCustomerMd5RealmAuthenicator {
             }
 
             //同时具有哪些权限
-            boolean permittedAll = subject.isPermittedAll("user:*:01", "product:create:01");
+            boolean permittedAll = subject.isPermittedAll("user:*:01", "com.liyc.activemq.product:create:01");
             System.out.println(permittedAll);
         }
 

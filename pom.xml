@@ -16,6 +16,7 @@
         <module>shiro</module>
         <module>common-test</module>
         <module>liyc-guava</module>
+        <module>liyc-activemq</module>
     </modules>
 
 

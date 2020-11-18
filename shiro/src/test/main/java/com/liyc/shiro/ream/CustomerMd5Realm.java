@@ -30,7 +30,7 @@ public class CustomerMd5Realm extends AuthorizingRealm {
 
         //将数据库中查询权限信息赋值个权限对象
         simpleAuthorizationInfo.addStringPermission("user:*:01");
-        simpleAuthorizationInfo.addStringPermission("product:create");
+        simpleAuthorizationInfo.addStringPermission("com.liyc.activemq.product:create");
 
 
         return simpleAuthorizationInfo;
