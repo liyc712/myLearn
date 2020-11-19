@@ -74,5 +74,7 @@ public class ListsExampleTest
         ArrayList<String> list = Lists.newArrayList("1", "2", "3","4");
         List<List<String>> result = Lists.partition(list, 2);
         System.out.println(result);
+        List<List<String>> lists = Lists.cartesianProduct(list);
+        System.out.println(lists);
     }
 }
