@@ -118,4 +118,10 @@ public class JoinerTest {
             fail("append to the writer occur fetal error.");
         }
     }
+
+    @Test
+    public void test() {
+        String join = Joiner.on("_").join("a", "b", "c");
+        System.out.println(join);
+    }
 }
