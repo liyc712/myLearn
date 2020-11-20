@@ -30,7 +30,7 @@ public class CommonTest {
         System.out.println("value : " + resultVal); //value : begin code!
 
         List<String> list = new ArrayList<String>();
-        list.add("aa");
+        list.add("aa") ;
         list.add("bb");
         list.add("cc");
         List<List<String>> lists = Lists.partition(list, 2);
